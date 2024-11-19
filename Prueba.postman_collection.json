@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "17680621-477a-4ce3-ba1a-dd86c5662eff",
+		"name": "Prueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Maestro Tipo Documentos",
+			"item": [
+				{
+					"name": "Listar Tipo Documentos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:18099/tipoDocumento/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Maestro Tipos Monedas",
+			"item": [
+				{
+					"name": "Listar Tipo Moneda",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:18099/tipoMoneda/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Listar Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:18099/clientes/"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:18099/clientes/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Clientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 0,\r\n    \"anoFundacion\": \"2021\",\r\n    \"apellido\": \"2\",\r\n    \"tipoCliente\": \"J\",\r\n    \"nombre\": \"prueba\",\r\n    \"numeroDocumento\": 3333,\r\n    \"razonSocial\": \"prueba\",\r\n    \"rut\": 3,\r\n    \"tipoDocumentoId\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:18099/clientes/"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Clientes",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"anoFundacion\": \"2021\",\r\n    \"apellido\": \"1\",\r\n    \"nombre\": \"prueba\",\r\n     \"tipoCliente\": \"J\",\r\n    \"numeroDocumento\": 2222,\r\n    \"razonSocial\": \"prueba\",\r\n    \"rut\": 2,\r\n    \"tipoDocumentoId\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:18099/clientes/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Clientes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:18099/clientes/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "Listar Cuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:18099/cuentas/"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Cuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:18099/cuentas/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Cuentas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 0,\r\n    \"estado\": \"A\",\r\n    \"numeroCuenta\": 2222,\r\n    \"saldo\": 1000,\r\n    \"clientesId\": {\r\n        \"id\": 1\r\n    },\r\n    \"tipoMoneda\": {\r\n        \"id\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:18099/cuentas/"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Cuentas",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"estado\": \"A\",\r\n    \"numeroCuenta\": 2222,\r\n    \"saldo\": 1000.55,\r\n    \"clientesId\": {\r\n        \"id\": 1\r\n    },\r\n    \"tipoMoneda\": {\r\n        \"id\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:18099/cuentas/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Cuentas",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:18099/cuentas/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "Listar Movimientos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:18099/movimientos/"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Movimientos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:18099/movimientos/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Movimientos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 0,\r\n    \"saldo\": 0,\r\n    \"signo\": \"+\",\r\n    \"valor\": 100000.0,\r\n    \"cuentaId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:18099/movimientos/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Swagger",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:18099/v2/api-docs"
+			},
+			"response": []
+		}
+	]
+}
